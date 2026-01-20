@@ -29,16 +29,12 @@ SDAG is a **block-sparse attention mechanism** that **disallows cross-attention 
 
 ---
 
-## RAG, threat model, and what this repo evaluates
+## RAG, Threat model, and SDAG Evaluation
 
 ### RAG formulation
-Given a question \(q\), a retriever \(R\) retrieves a set of \(k\) documents  
-\(D := R(q, C) = \{d_1, \dots, d_k\}\) from corpus \(C\).
-A generator \(G\) then produces an answer
-\(y = G(p, q, D)\), where \(p\) denotes instructions and optional context.
-
-After tokenization, each retrieved document corresponds to a token **block** \(B_i\).
-The instruction + query block is \(B_T\), and optional generator context is \(B_C\).
+Given a question, a retriever  retrieves a set of k documents from a corpus.
+A generator then produces an answer based on the retrieved documents.
+After tokenization, each retrieved document corresponds to a token block.
 
 ### Threat model: Corpus Knowledge Poisoning
 The attacker injects adversarial documents crafted to steer the generator toward a false target answer.
