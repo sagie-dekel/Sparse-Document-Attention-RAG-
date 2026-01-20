@@ -3,7 +3,7 @@
 ## Overview
 This repository contains the official code for the paper "Addressing Corpus Knowledge Poisoning Attacks on RAG Using Sparse Attention”.
 
-This repository implements an experimental pipeline for **Retrieval-Augmented Generation (RAG)** under **Corpus Knowledge Poisoning**. It evaluates **Sparse Document Attention RAG (SDAG)** against a causal-attention-based RAG (CARG) baseline and additional defense baselines (e.g., RAGDefender, Discern-and-Answer), including **SDAG + baseline integration**.
+This repository implements an experimental pipeline for **Retrieval-Augmented Generation (RAG)** under **Corpus Knowledge Poisoning**. It evaluates **Sparse Document Attention RAG (SDAG)** against a causal-attention-based RAG (CARG) baseline and additional defense baselines, including **SDAG + baseline integration**.
 
 SDAG is a **block-sparse attention mechanism** that **disallows cross-attention between retrieved documents**, mitigating harmful cross-document interactions when the retrieved set contains conflicting or adversarial evidence. SDAG is applied as a **minimal inference-time change** (attention mask only), with **no fine-tuning** and no architectural changes required.
 
