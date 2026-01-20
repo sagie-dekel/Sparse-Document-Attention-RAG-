@@ -61,8 +61,9 @@ The pipeline supports:
 1. Query loading / sampling (Natural Questions, HotpotQA, TriviaQA, or CSV).
 2. Retrieval using **dense**, **sparse (BM25)**, or **hybrid** retrievers.
 3. **Corpus poisoning attacks**:
-   - malicious document injection (single and multiple adversarial document insertion).
+   - adversarial document injection (single and multiple adversarial document insertion).
    - document corruption variants.
+  The adversarial documents can be loaded from a csv file or generated using the RAG LLM.
 4. **Defenses**:
    - none (CARG baseline)
    - SDAG (document-isolated generation)
@@ -75,7 +76,7 @@ The pipeline supports:
 
 ## Installation
 
-Example dependencies (adjust as needed):
+Example dependencies:
 
 ```bash
 pip install torch transformers sentence-transformers faiss-cpu pyserini tqdm numpy
