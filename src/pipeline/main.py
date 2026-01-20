@@ -33,7 +33,7 @@ from src.pipeline.retrieval.sparse import SparseRetriever, load_sparse_searcher
 from src.pipeline.retrieval.hybrid import HybridRetriever
 from src.pipeline.utils.parsing import load_from_csv
 from src.pipeline.utils.ranked_list import attack_config_requests_docs, inject_malicious_docs_into_ranked_list, apply_ranked_list_order
-from src.pipeline.sparse_attention_RAG.iso_generation import run_rag_with_doc_isolation
+from src.pipeline.sparse_attention_RAG.SDAG import run_rag_with_doc_isolation
 from src.pipeline.utils.normalization import exact_match, extract_final_answer
 
 
